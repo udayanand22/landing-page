@@ -1,167 +1,252 @@
-<!DOCTYPE HTML>
-<html>
-	<head>
-		<title>Story by HTML5 UP</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" />
-    </head>
-	<body class="is-preload">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Uday Anand | AI/ML Engineer & Product Innovator</title>
+  <meta name="description" content="Portfolio of Uday Anand - AI/ML Engineer, specializing in LangChain, Computer Vision, Generative AI, and ML Ops." />
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+  <link rel="icon" href="favicon.ico" />
+  <style>
+    html { scroll-behavior: smooth; }
+    .project-card {
+      transition: all 0.3s ease;
+      will-change: transform, box-shadow;
+    }
+    .project-card:hover {
+      transform: scale(1.05) rotate(-0.5deg);
+      box-shadow: 0 15px 30px rgba(0, 128, 128, 0.6);
+    }
+    /* Fade in animation */
+    .fade-in {
+      animation: fadeIn 1s ease forwards;
+      opacity: 0;
+    }
+    @keyframes fadeIn {
+      to { opacity: 1; }
+    }
+    /* Lightbox fade */
+    #lightbox {
+      transition: opacity 0.3s ease;
+      opacity: 0;
+      pointer-events: none;
+    }
+    #lightbox.show {
+      opacity: 1;
+      pointer-events: auto;
+    }
+    /* Back to Top Button */
+    #backToTop {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background-color: #14b8a6;
+      color: white;
+      padding: 0.5rem 0.75rem;
+      border-radius: 9999px;
+      cursor: pointer;
+      display: none;
+      font-weight: 600;
+      box-shadow: 0 4px 8px rgba(20, 184, 166, 0.6);
+      transition: background-color 0.3s ease;
+      z-index: 100;
+    }
+    #backToTop:hover,
+    #backToTop:focus {
+      background-color: #0f766e;
+      outline: none;
+    }
+    /* Responsive video container */
+    .video-container {
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+      overflow: hidden;
+      border-radius: 0.75rem;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7);
+      margin-bottom: 0.5rem;
+    }
+    .video-container iframe,
+    .video-container video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  </style>
+</head>
+<body class="bg-gray-950 text-white font-sans">
 
-		<!-- Wrapper -->
-			<div id="wrapper" class="divided">
+<header class="fixed top-0 w-full z-50 backdrop-blur-md bg-gray-900 bg-opacity-60 shadow-lg">
+  <div class="max-w-7xl mx-auto flex justify-between items-center px-6 py-4">
+    <span class="text-teal-400 font-bold text-xl">Uday Anand</span>
+    <nav aria-label="Primary" class="space-x-6 text-sm">
+      <a href="#about" tabindex="0" class="hover:text-teal-400 focus:outline-teal-400 focus:outline-2 focus:outline-offset-2">About</a>
+      <a href="#projects" tabindex="0" class="hover:text-teal-400 focus:outline-teal-400 focus:outline-2 focus:outline-offset-2">Projects</a>
+      <a href="#experience" tabindex="0" class="hover:text-teal-400 focus:outline-teal-400 focus:outline-2 focus:outline-offset-2">Experience</a>
+      <a href="#certifications" tabindex="0" class="hover:text-teal-400 focus:outline-teal-400 focus:outline-2 focus:outline-offset-2">Certifications</a>
+    </nav>
+  </div>
+</header>
 
-				<!-- One -->
-					<section class="banner style1 orient-left content-align-left image-position-right fullscreen onload-image-fade-in onload-content-fade-right">
-						<div class="content">
-							<h1>Uday Anand</h1>
-					<p>Sophomore in B.Tech CSE <br>Data Structures & ML Enthusiast<br>Innovative<br>SWE Fellow @Headstart.ai</p>
-							<ul class="actions stacked">
-								<li><a href="#first" class="button big wide smooth-scroll-middle">Get Started</a></li>
-							</ul>
-						</div>
-						<div class="image">
-							<img src="images/image2.png" alt="" />
-						</div>
-					</section>
+<!-- Hero Section -->
+<section class="min-h-screen flex items-center justify-center text-center px-6 bg-gradient-to-br from-gray-900 to-black pt-24">
+  <div>
+    <img src="images/image2.png" alt="Portrait of Uday Anand" class="mx-auto mb-6 w-32 h-32 rounded-full border-4 border-teal-500 shadow-xl" />
+    <h1 class="text-5xl font-extrabold mb-3">Uday Anand</h1>
+    <p class="text-lg text-teal-400">AI/ML Engineer • LLM Systems • SWE Fellow @ Headstart.ai</p>
+    <p class="text-gray-400 max-w-2xl mx-auto mt-5">Building AI products at scale, blending innovation and engineering precision. Specializing in LangChain, Computer Vision, Generative AI, and enterprise-grade ML Ops.</p>
+    <div class="mt-8">
+      <a href="#projects" class="inline-block bg-teal-500 hover:bg-teal-600 text-white py-3 px-8 rounded-lg text-sm font-semibold shadow-lg transition transform hover:scale-105 focus:outline-teal-400 focus:outline-2 focus:outline-offset-2">Explore Projects</a>
+    </div>
+  </div>
+</section>
 
-				<!-- Two -->
-			<section class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in" id="first">
-				<div class="content">
-					<h2>Sophomore in B.Tech CSE</h2>
-					<p>I am currently pursuing a Bachelor of Technology (B.Tech) in Computer Science Engineering from Dr. APJ Abdul Kalam Technical University (AKTU), Lucknow. As a sophomore, I am deeply engaged in exploring various facets of computer science, including software development, algorithms, and machine learning. My coursework and projects are geared towards developing a solid foundation in both theoretical concepts and practical applications within the field.</p>
-					<ul class="actions stacked">
-						<li><a href="https://www.linkedin.com/in/uday-anand-19476a292/" class="button">LinkedIn</a></li>
-					</ul>
-				</div>
-				<div class="image">
-					<img src="images/image 1.png" alt="" />
-				</div>
-			</section>
+<!-- About Section -->
+<section id="about" class="px-6 py-24 bg-gray-900">
+  <div class="max-w-4xl mx-auto text-center">
+    <h2 class="text-3xl font-bold mb-5">About Me</h2>
+    <p class="text-gray-400 text-lg">CS Undergrad @ SRMS (AKTU), passionate about impactful AI/ML innovations. From LLM orchestration and vision systems to cloud-native ML Ops, I thrive at the convergence of research, engineering, and scalable deployments.</p>
+  </div>
+</section>
 
-				<!-- Three -->
-			<section class="spotlight style1 orient-left content-align-left image-position-center onscroll-image-fade-in">
-				<div class="content">
-					<h2>Data Structures & ML Enthusiast</h2>
-					<p>I have a keen interest in data structures, which forms the foundation of efficient algorithm design and problem-solving. Additionally, I have expanded my knowledge in machine learning by completing the Stanford online course on linear regression through Coursera. This course provided me with a solid understanding of regression analysis and its applications in predictive modeling.</p>
-					<ul class="actions stacked">
-						<li><a href="https://www.coursera.org/account/accomplishments/certificate/7YMX75QN59EN" class="button">View Credentials</a></li>
-					</ul>
-				</div>
-				<div class="image">
-					<img src="images/certificate.png" alt="" />
-				</div>
-			</section>
+<!-- Projects Section -->
+<section id="projects" class="px-6 py-24">
+  <div class="max-w-6xl mx-auto">
+    <h2 class="text-3xl font-bold text-center mb-14">Featured Projects</h2>
+    <div class="grid gap-12 md:grid-cols-2 lg:grid-cols-3">
 
-			<!-- Four -->
-			<section class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in">
-				<div class="content">
-					<h2>Innovative</h2>
-					<p>I developed a face recognition Attendance system as part of a personal project. This innovative project involved using advanced computer vision techniques and machine learning algorithms to accurately identify and verify individuals based on facial features. The system leveraged pre-trained deep learning models for feature extraction and employed algorithms to match and recognize faces from a database. This project not only enhanced my skills in Python and machine learning but also provided practical experience in implementing cutting-edge technologies.</p>
-				</div>
-				<div class="image">
-					<img src="images/image 3.png" alt="" />
-				</div>
-			</section>
+      <!-- Narad.ai -->
+      <article class="project-card bg-gray-800 p-6 rounded-2xl shadow-xl fade-in" tabindex="0" aria-labelledby="narad-title" aria-describedby="narad-desc">
+        <h3 id="narad-title" class="text-xl font-semibold text-teal-400">Narad.ai</h3>
+        <p id="narad-desc" class="text-sm text-gray-300 mb-2">Conversational Hinduism Q&A assistant using LangChain, Cohere API, and Hugging Face. Built with summarization and relevance scoring for authenticity and ethical prompting.</p>
+        <span class="text-xs text-gray-400">LangChain • LLMs • Streamlit • Cohere</span>
+        <div class="mt-4 video-container">
+          <video controls class="rounded-lg">
+            <source src="videos/narada.1.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
+        <p class="text-xs text-gray-400">Narad.ai bridges cultural knowledge gaps with context-aware, authenticated answers. Designed for lightweight, ethical deployments.</p>
+      </article>
 
-			<!-- Three+1 -->
-			<section class="spotlight style1 orient-left content-align-left image-position-center onscroll-image-fade-in">
-				<div class="content">
-					<h2>SWE Fellow @Headstart.ai</h2>
-					<p>As a Software Engineering Fellow at Headstart.ai, I have had the opportunity to work on cutting-edge projects in the field of artificial intelligence and machine learning. My role involves contributing to the development and enhancement of AI-driven solutions, including designing and implementing software components, debugging and optimizing code, and collaborating with cross-functional teams. This experience has allowed me to deepen my understanding of advanced technologies, enhance my coding skills, and gain hands-on experience with real-world AI applications.</p>
-				</div>
-				<div class="image">
-					<img src="images/image4.png" alt="" />
-				</div>
-			</section>
-				<!-- Five -->
-			<section class="wrapper style1 align-center">
-				<div class="inner">
-					<h2>My Vision</h2>
-					<p>I wish to create, collaborate, and contribute to making a cleaner, greener, and more conscious planet. My goal is to drive advancements that support sustainable practices and foster environmental stewardship, ensuring a brighter future for generations to come.</p>
-				</div>
+      <!-- Tansen.ai -->
+      <article class="project-card bg-gray-800 p-6 rounded-2xl shadow-xl fade-in" tabindex="0" aria-labelledby="tansen-title" aria-describedby="tansen-desc">
+        <h3 id="tansen-title" class="text-xl font-semibold text-teal-400">Tansen.ai</h3>
+        <p id="tansen-desc" class="text-sm text-gray-300 mb-2">Chat assistant for Indian classical music, built using React, Node.js, Botpress, and Firebase authentication. Enables intuitive chat-based learning of Ragas and Talas.</p>
+        <span class="text-xs text-gray-400">React • Firebase • Botpress</span>
+        <div class="mt-4 video-container">
+          <video controls class="rounded-lg">
+            <source src="videos/tansen.ai.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
+        <p class="text-xs text-gray-400">Empowering cultural preservation through intuitive conversational experiences. Focused on accessibility and user engagement.</p>
+      </article>
 
-						<!-- Gallery -->
-							<div class="gallery style2 medium lightbox onscroll-fade-in">
-								<article>
-									<a href="https://www.coursera.org/account/accomplishments/certificate/7YMX75QN59EN" class="image">
-										<img src="images/stanford.png" alt="" />
-									</a>
-									<div class="caption">
-										<h3>Stanford Online</h3>
-										<p>Supervised Machine Learning: Regression and Classification certification from Coursera.</p>
-										<ul class="actions fixed">
-											<li><span class="button small">Details</span></li>
-										</ul>
-									</div>
-								</article>
-								<article>
-									<a href="https://www.linkedin.com/posts/uday-anand-19476a292_java-explorer-learn-oracle-for-free-oracle-activity-7214928578419826688-htro?utm_source=share&utm_medium=member_desktop" class="image">
-										<img src="images/oracle.png" alt="" />
-									</a>
-									<div class="caption">
-										<h3>Oracle University</h3>
-										<p>Java Explorer Badge</p>
-										<ul class="actions fixed">
-											<li><span class="button small">Details</span></li>
-										</ul>
-									</div>
-								</article>
-								<article>
-									<a href="https://www.linkedin.com/posts/uday-anand-19476a292_softwareengineering-fellowship-headstartai-activity-7220641406606860288-kaoM?utm_source=share&utm_medium=member_desktop" class="image">
-										<img src="images/theheadstarter_logo.jpg" alt="" />
-									</a>
-									<div class="caption">
-										<h3>Headstart.ai</h3>
-							<p>SWE Fellowship</p>
-							<ul class="actions fixed">
-								<li><span class="button small">Details</span></li>
-							</ul>
-						</div>
-					</article>
-					<article>
-						<a href="https://www.linkedin.com/posts/uday-anand-19476a292_get-started-building-with-power-bi-activity-7215221576118525952-uAhl?utm_source=share&utm_medium=member_desktop" class="image">
-							<img src="images/powerbi.png" alt="" />
-						</a>
-						<div class="caption">
-							<h3>Microsoft</h3>
-							<p>Microsoft Get Started Building with Power BI</p>
-							<ul class="actions fixed">
-								<li><span class="button small">Details</span></li>
-							</ul>
-						</div>
-					</article>
-							</div>
+      <!-- Inventory Tracker -->
+      <article class="project-card bg-gray-800 p-6 rounded-2xl shadow-xl fade-in" tabindex="0" aria-labelledby="inventory-title" aria-describedby="inventory-desc">
+        <h3 id="inventory-title" class="text-xl font-semibold text-teal-400">Inventory Tracker</h3>
+        <p id="inventory-desc" class="text-sm text-gray-300 mb-2">A React-based inventory management system integrated with Firebase database, enabling real-time inventory addition, deletion, and updates for seamless product tracking.</p>
+        <span class="text-xs text-gray-400">React • Firebase • Real-time Database</span>
+        <div class="mt-4 video-container">
+          <iframe
+            class="rounded-lg"
+            src="https://www.youtube.com/embed/d20eoat74WA?si=3UfsEGiTVA0Un85I"
+            title="Inventory Tracker Demo"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </div>
+        <p class="text-xs text-gray-400">Streamlining inventory management with real-time updates and easy UI.</p>
+      </article>
 
-					</section>
-				<!-- Five+1 -->
-			<section class="wrapper style1 align-center">
-				<div class="inner">
-					<p><i>"Success is not the result of spontaneous combustion. You must set yourself on fire."</i> <br><b>Arnold H. Glasow</b></p>
-				</div>
+    </div>
+  </div>
+</section>
 
-				<!-- Footer -->
-				<footer class="wrapper style1 align-center">
-					<div class="inner">
-						<ul class="icons">
-							<li><a href="https://www.linkedin.com/in/uday-anand-19476a292/" class="icon brands style2 fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
-						</ul>
-					</div>
-				</footer>
-			</section>
+<!-- Experience Section -->
+<section id="experience" class="px-6 py-24 bg-gray-900">
+  <div class="max-w-4xl mx-auto text-center">
+    <h2 class="text-3xl font-bold mb-6">Experience & Fellowships</h2>
+    <ul class="text-gray-400 text-left space-y-4 max-w-xl mx-auto">
+      <li>
+        <strong>Software Engineering Fellow</strong> at Headstart.ai (2023-Present) — Focus on AI/ML and product development.
+      </li>
+      <li>
+        <strong>Machine Learning Intern</strong> — Developed scalable ML models for industry applications.
+      </li>
+      <li>
+        <strong>Volunteer</strong> — Participated in open-source AI projects and community events.
+      </li>
+    </ul>
+  </div>
+</section>
 
-			</div>
+<!-- Certifications -->
+<section class="px-6 py-24 text-center bg-gradient-to-br from-gray-950 to-black">
+  <div class="max-w-5xl mx-auto">
+    <h2 class="text-3xl font-bold mb-8 text-teal-400">Certifications</h2>
+    <p class="text-gray-400 text-lg mb-12">Stanford ML Specialization (DeepLearning.AI) • Harvard CS50 Python (edX)</p>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <!-- Certificate 1 -->
+      <div class="bg-gray-900 bg-opacity-80 rounded-2xl shadow-2xl overflow-hidden transition transform hover:scale-105">
+        <img src="images/pythonc.png" alt="CS50 Python - Harvard" class="w-full h-64 object-cover">
+        <div class="p-4">
+          <h3 class="text-lg font-semibold text-teal-400">CS50's Python</h3>
+          <p class="text-xs text-gray-400 mt-1">Harvard University (edX)</p>
+        </div>
+      </div>
 
-	</body>
+      <!-- Certificate 2 -->
+      <div class="bg-gray-900 bg-opacity-80 rounded-2xl shadow-2xl overflow-hidden transition transform hover:scale-105">
+        <img src="images/certificate.png" alt="ML Course 1 - Stanford" class="w-full h-64 object-cover">
+        <div class="p-4">
+          <h3 class="text-lg font-semibold text-teal-400">Supervised Machine Learning: Regression and Classification</h3>
+          <p class="text-xs text-gray-400 mt-1">Andrew Ng, Stanford (DeepLearning.AI)</p>
+        </div>
+      </div>
+
+      <!-- Certificate 3 -->
+      <div class="bg-gray-900 bg-opacity-80 rounded-2xl shadow-2xl overflow-hidden transition transform hover:scale-105">
+        <img src="images/certi2.png" alt="ML Course 2 - Stanford" class="w-full h-64 object-cover">
+        <div class="p-4">
+          <h3 class="text-lg font-semibold text-teal-400">Advanced Learning Algorithms</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Footer -->
+  <footer class="text-center py-6 bg-black text-gray-600 text-sm">
+    © 2025 Uday Anand. All rights reserved.
+  </footer>
+<!-- Lightbox Modal -->
+<div id="lightbox" class="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center hidden z-50">
+  <img id="lightbox-img" src="" class="max-h-[80vh] rounded-lg shadow-2xl">
+</div>
+
+<!-- Back to Top Button -->
+<button id="backToTop" aria-label="Back to top">↑</button>
+
+<script>
+  // Lightbox script (optional if you want to implement lightbox)
+  // Scroll to top button
+  const backToTop = document.getElementById('backToTop');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 300) {
+      backToTop.style.display = 'block';
+    } else {
+      backToTop.style.display = 'none';
+    }
+  });
+  backToTop.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+</script>
+
+</body>
 </html>
